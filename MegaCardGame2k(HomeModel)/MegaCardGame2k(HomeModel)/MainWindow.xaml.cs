@@ -16,12 +16,14 @@ using _2kClasses;
 
 namespace MegaCardGame2k_HomeModel_
 {
+
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        GameWindow Gw;
 
         public MainWindow()
         {
@@ -30,9 +32,28 @@ namespace MegaCardGame2k_HomeModel_
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Warrior_Click(object sender, RoutedEventArgs e)
         {
-            
+            Gw = new GameWindow('W');
+            Gw.imgPlayer.Source = new BitmapImage(new Uri(@"D:\MegaCardGame2000-HomeModel-\MegaCardGame2k(HomeModel)\MegaCardGame2k(HomeModel)\Resources\Warrior.png"));
+            this.Hide();
+            Gw.Show();
+        }
+
+        private void Mage_Click(object sender, RoutedEventArgs e)
+        {
+            Gw = new GameWindow('M');
+            Gw.imgPlayer.Source = new BitmapImage(new Uri(@"D:\MegaCardGame2000-HomeModel-\MegaCardGame2k(HomeModel)\MegaCardGame2k(HomeModel)\Resources\Mage.png"));
+            this.Hide();
+            Gw.Show();
+        }
+
+        private void Thief_Click(object sender, RoutedEventArgs e)
+        {
+            Gw = new GameWindow('T');
+            Gw.imgPlayer.Source = new BitmapImage(new Uri(@"D:\MegaCardGame2000-HomeModel-\MegaCardGame2k(HomeModel)\MegaCardGame2k(HomeModel)\Resources\Thief.png"));
+            this.Hide();
+            Gw.Show();
         }
     }
 }

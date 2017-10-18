@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace _2kClasses
 {
-    public class SpecialAttack : Attack
+    class Warrior : Player
     {
-        public virtual int RollOutcome(int Damage)
+        public Warrior(int p, int p_2) : base (p,p_2)
         {
-            throw new Exception();
+            vSpecialAttack = new Berserk();
         }
-
     }
 }

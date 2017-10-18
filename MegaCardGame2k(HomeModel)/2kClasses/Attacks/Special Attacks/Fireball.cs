@@ -8,10 +8,10 @@ namespace _2kClasses
 {
     class Fireball : SpecialAttack
     {
-        public int Roll(int damage)
+        public override int RollOutcome(int damage)
         {
             var vRandom = new Random();
-            if (vRandom.Next(0,1) == 1)
+            if (vRandom.Next(0,2) == 1)
             {
                 return damage * 4;
             }
@@ -20,6 +20,5 @@ namespace _2kClasses
                 return damage * -1;
             }
         }
-
     }
 }

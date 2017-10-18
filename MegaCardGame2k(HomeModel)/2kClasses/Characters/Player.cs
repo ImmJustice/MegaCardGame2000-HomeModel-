@@ -6,33 +6,18 @@ using System.Threading.Tasks;
 
 namespace _2kClasses
 {
-    class Player : Character
+    public class Player : Character
     {
-        private SpecialAttack sSpecialAttack;
+        protected SpecialAttack vSpecialAttack;
 
-        public Player(int baseDamage, int currentHealthPoints, char Class) : base(baseDamage, currentHealthPoints)
+        public Player(int baseDamage, int currentHealthPoints) : base(baseDamage, currentHealthPoints) { }
+                   
+        
+
+        public virtual void IniateSpecial(Character Target)
         {
-            switch (Class)
-            {
-                case 'W':
-                    sSpecialAttack = new Berserk();
-
-                    break;
-
-                case 'M':
-                    sSpecialAttack = new Fireball();
-
-                    break;
-
-                case 'T':
-                    sSpecialAttack = new Back_Stab();
-
-                    break;
-
-                default:
-                    throw new Exception();
-            }
-
+            vSpecialAttack.DealDamage(vSpecialAttack.RollOutcome(BaseDamage), Target);
         }
+
     }
 }

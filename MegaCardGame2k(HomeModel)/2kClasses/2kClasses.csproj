@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +46,9 @@
     <Compile Include="Attacks\Special Attacks\Berserk.cs" />
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Attacks\Special Attacks\Fireball.cs" />
+    <Compile Include="Characters\Classes\Mage.cs" />
+    <Compile Include="Characters\Classes\Thief.cs" />
+    <Compile Include="Characters\Classes\Warrior.cs" />
     <Compile Include="Console\GameControl.cs" />
     <Compile Include="Attacks\NormalAttack.cs" />
     <Compile Include="Characters\NPC.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2kClasses
 {
-    class NormalAttack
+    public class NormalAttack : Attack
     {
     }
 }

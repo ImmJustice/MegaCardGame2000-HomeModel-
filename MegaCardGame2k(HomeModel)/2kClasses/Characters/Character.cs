@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 
 namespace _2kClasses
 {
-    class Character
+    public class Character
     {
-        private int pBaseDamage { get; set; }
-        private int pCurrentHealthPoints { get; set; }
-        
+        public int Hp;
+        public int BaseDamage;
+        protected NormalAttack vNormalAttack;
 
-        public void TakeDamage(int Damage)
+        public Character(int p, int p_2)
         {
-            pCurrentHealthPoints -= Damage;
-
-            // To implement update of lable
+            Hp = p;
+            BaseDamage = p_2;
+            vNormalAttack = new NormalAttack();
         }
 
-        public Character(int baseDamage, int currentHealthPoints )
+        public void AttackChar(Character Target)
         {
-            pBaseDamage = baseDamage;
-            pCurrentHealthPoints = currentHealthPoints;
+            vNormalAttack.DealDamage(BaseDamage, Target);
         }
     }
 

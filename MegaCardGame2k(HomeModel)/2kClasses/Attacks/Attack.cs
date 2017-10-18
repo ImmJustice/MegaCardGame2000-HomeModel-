@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace _2kClasses
 {
-    class Attack
+    public class Attack
     {
+        public virtual void DealDamage(int Damage, Character Target)
+        {
+            Target.Hp -= Damage;
+        }
     }
 }

@@ -9,11 +9,11 @@ namespace _2kClasses
 {
     class Back_Stab : SpecialAttack
     {
-        public int Roll(int damage)
+        public override int RollOutcome(int damage)
         {
             var vRandom = new Random();
 
-            if (vRandom.Next(0,2) == 2)
+            if (vRandom.Next(0,3) == 2)
             {
                 return damage * 2;
             }
